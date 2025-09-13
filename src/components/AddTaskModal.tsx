@@ -69,8 +69,8 @@ export default function AddTaskModal({
     dueDate,
     assignees,
     setTasks,
-    setDescription,
-    setDueDate,
+    setdescription,
+    setdueDate,
     setAssignees,
     resetForm,
   } = useTaskFormStore();
@@ -95,7 +95,7 @@ export default function AddTaskModal({
           label="Description"
           withAsterisk
           value={description}
-          onChange={(e) => setDescription(e.currentTarget.value)}
+          onChange={(e) => setdescription(e.currentTarget.value)}
           error={!description.trim() && "Description is required"}
         />
         <DateInput
@@ -104,7 +104,7 @@ export default function AddTaskModal({
           valueFormat="ddd MMM DD YYYY"
           minDate={new Date()}
           value={dueDate}
-          onChange={(date) => setDueDate(date ? date : null)}
+          onChange={(date) => setdueDate(date ? date : null)}
           error={!dueDate?.trim() ? "Due Date is required" : false}
         />
         {/* เพิ่ม MultiSelect ตรงนี้*/}
